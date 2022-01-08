@@ -1,0 +1,231 @@
+@import './variables/colors';
+@import './variables//mixins';
+
+.main__section {
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    background-color: $main-white;
+}
+
+
+
+.section__container {
+    min-height: 100vh;
+    align-items: center;
+    
+}
+
+.flex__items {
+    @include flex-center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.section__text {
+    margin-inline: 5.5rem;
+    width: 100%;
+    border-top: 3px solid $main-button-fire;
+    padding: 5px;
+}
+
+.section__text h1{
+    font-size: 3.125rem;
+}
+
+.section__text p {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    letter-spacing: 2px;
+}
+.section__text button {
+
+    @include buttonfire;
+    margin-top: 1rem;
+     a {
+        text-decoration: none;
+        color: $main-button-fire;
+    }
+}
+.section__text button:hover {
+    @include hoveredbutton;
+    
+    a {
+        color: $main-white;
+    }
+}
+
+
+
+.bottom__section {
+    width: 100%;
+    padding: 2rem;
+    @include flex-center;
+    flex-direction: column;
+}
+
+.links {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    a {
+        text-decoration: none;
+        margin-inline: 1.5rem;
+        font-size: 23px;
+        color: $nav-dark;
+        border-bottom: 3px solid $main-button-fire;
+        padding-bottom: .4rem;
+
+        &:hover {
+            color: $main-button-fire;
+        }
+    }
+}
+
+.buttons {
+    width: 100%;
+    @include flex-center;
+    justify-content: center;
+}
+
+.buttons button{
+    margin-inline: 1.5rem;
+    margin-block: 2rem;
+    color: $main-button-fire;
+    @include buttonfire;
+}
+.buttons button:hover {
+    @include hoveredbutton;
+    color: $main-white;
+}
+
+.bottom__h3 {
+    width: 65%;
+    margin-top: 4.125rem;
+    font-size: 25px;
+    line-height: 2.4rem;
+    color: rgb(129, 113, 113);
+}
+
+
+
+.section__img{
+    padding: 10px;
+    background-color: $main-button-fire;
+    // clip-path: polygon(100% 0, 100% 0%, 100% 100%, 45% 100%, 0 0);
+    width: 100%;
+    margin-right: 1rem;
+}
+
+.text__icon {
+    margin-top: 2rem;
+
+    h1 {
+        font-size: 35px;
+    }
+}
+
+
+@media (max-width:1200px) {
+    .flex__items {
+        max-width: 100%;
+        min-height: 100vh;
+        @include flex-center;
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .section__text {
+        margin-inline: 0rem;
+        width: 100%;
+    }
+    
+    .section__text h1{
+        font-size: 2rem;
+    }
+    
+    .section__text p {
+        font-size: 1.25rem;
+        margin-top: 1rem;
+        letter-spacing: 2px;
+    }
+
+
+    .section__img{
+        max-width:60%;
+        margin-bottom: 1rem;
+        clip-path: none;
+
+    }
+
+    .links {     
+        display: flex;
+        justify-content: space-between;
+        a {
+            text-decoration: none;
+            margin-inline: .5rem;
+            font-size: 14px;
+            color: $nav-dark;
+            border-bottom: 1px solid $nav-dark;
+            white-space: nowrap;
+        }
+    }
+
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .buttons button{
+        margin-inline: 1.5rem;
+        margin-block: 0rem;
+        padding: 10px 30px;
+        background-color: transparent;
+        border:  2px solid $nav-dark;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 9px;
+        margin-top: 1rem;
+
+    }
+    
+
+    .bottom__h3 {
+        width: 60%;
+        margin-top: 4.125rem;
+        font-size: 12px;
+        line-height: 1.4rem;
+        color: rgb(53, 49, 49);
+    }
+    
+
+    .text__icon {
+        margin-top: 2rem;
+    
+        h1 {
+            font-size: 15px;
+        }
+    }
+    
+
+}
+
+@media (max-width:450px) {
+    
+    .links {     
+        display: flex;
+        justify-content: space-between;
+        a {
+            text-decoration: none;
+            margin-inline: .3rem;
+            font-size: 8px;
+            color: $nav-dark;
+            border-bottom: 1px solid $nav-dark;
+            white-space: nowrap;
+        }
+    }
+}
