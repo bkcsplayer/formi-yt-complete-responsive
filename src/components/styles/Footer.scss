@@ -1,0 +1,126 @@
+@import './variables/colors';
+@import './variables/mixins';
+
+.footer__section {
+    width: 100%;
+    min-height: 50vh;
+    background-color: $card-dark;
+    font-family: 'Poppins', sans-serif;
+    border-top: 1px solid $card-dark;
+    padding: 7px;
+    border: 5px solid $main-button-fire;
+}
+.footer__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: auto;
+    border-bottom: 2px solid #fff;
+}
+
+.footer__card {
+    display: flex;
+    flex-direction: column;
+    margin-block: 2.2rem;
+}
+.footer__card a {
+    margin-block: .5rem;
+    text-decoration: none;
+    font-size: 15px;
+    color: $main-white;
+    text-transform: uppercase;
+
+    &:hover {
+        color: $main-button-fire;
+    }
+}
+
+
+
+.footer__logo{
+
+    h1 {
+    color: #fff;
+    font-size: 35px;
+    }
+
+    p {
+        color: rgb(139, 137, 137);
+        text-transform: uppercase;
+    }
+}
+.footer__icons {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    .footer__icon {
+        margin-left: auto;
+        margin-right: auto;
+        margin-block: 2rem;
+        color: #fff;
+        font-size: 55px;
+        cursor: pointer;
+
+        &:hover {
+            color: $main-button-fire;
+
+        }
+    }
+}
+
+
+@media (max-width:1000px) {
+
+    .footer__section {
+        display: flex;
+    }
+
+    .footer__container {
+        width: 100%;
+        display: block;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        margin-top: 0;
+        border-bottom: none;
+        border-right: 2px solid #fff;
+    }
+
+    .footer__icons {
+        flex-direction: column;
+
+        .footer__icon {
+            margin-left: auto;
+            margin-right: auto;
+            margin-block: 1rem;
+            color: #fff;
+            font-size: 35px;
+            cursor: pointer;
+        }
+    }
+
+    .footer__card a {
+        
+        margin-block: .3rem;
+        text-decoration: none;
+        font-size: 11px;
+        color: $main-white;
+        text-transform: uppercase;
+    }
+
+    .footer__logo{
+
+        h1 {
+        color: #fff;
+        font-size: 25px;
+        }
+    
+        p {
+            color: rgb(139, 137, 137);
+            text-transform: uppercase;
+            font-size: 10px;
+        }
+    }
+
+
+}
